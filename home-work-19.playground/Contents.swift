@@ -10,6 +10,7 @@ func getData(urlRequaest: String) {
             print("Server response code: \(response.statusCode)")
             guard let data = data else { return }
             let dataAsString = String(data: data, encoding: .utf8)
+            print("Data: \(String(describing: dataAsString ?? "failed"))")
         }
     }.resume()
 }
